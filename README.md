@@ -11,13 +11,13 @@ pelatihan/
 ## Alur Branch
 
 ```
-feature/*  ──►  sit  ──►  iat  ──►  main
+feature/*  ──►  sit  ──►  uat  ──►  main
 ```
 
 | Branch       | Fungsi                                                          |
 |--------------|-----------------------------------------------------------------|
-| `main`       | Kode produksi / rilis. Hanya menerima merge dari `iat`.          |
-| `iat`        | Integration Acceptance Test, diuji oleh user/penguji. Menerima merge dari `sit`. |
+| `main`       | Kode produksi / rilis. Hanya menerima merge dari `uat`.          |
+| `uat`        | User Acceptance Test, diuji oleh user/pemilik aplikasi. Menerima merge dari `sit`. |
 | `sit`        | System Integration Test, gabungan semua fitur untuk diuji tim. Menerima merge dari `feature/*`. |
 | `feature/*`  | Satu branch per fitur/perbaikan, dibuat dari `main`.             |
 
@@ -37,8 +37,8 @@ Lalu buat Pull Request: `feature/nama-fitur` → `sit`.
 
 ### Promosi antar lingkungan
 
-1. Fitur lolos uji di **SIT**: buat Pull Request `sit` → `iat`.
-2. Lolos uji di **IAT**: buat Pull Request `iat` → `main`.
+1. Fitur lolos uji di **SIT**: buat Pull Request `sit` → `uat`.
+2. Lolos uji di **UAT**: buat Pull Request `uat` → `main`.
 
 ### Aturan penamaan
 
